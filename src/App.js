@@ -9,7 +9,6 @@ function App() {
     <div className="App">
       <div class='intro'>
         <h1>Haven Offall Calc1000</h1>
-        <p>Given Lengths below, what will the offall be? Under 2.5 is too small and will destroy the last piece.</p>
         <ul>
           <li>.125 (1/8th inch) is lost per cut from verticle blade</li>
           <li>2 - 3 inches is minimum offall. Less will crush the last part!</li>
