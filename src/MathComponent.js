@@ -8,7 +8,7 @@ class MathComponent extends Component{
         <p>PartLength:{this.props.partLength}</p>
         <p>LongBar Length: {this.props.lbLength}</p>
         <p>Whole Parts: {parseInt(this.props.lbLength / this.props.partLength)}</p>
-        <p>Projected Offall: {(.125 * parseInt(this.props.lbLength / this.props.partLength))+(this.props.lbLength % this.props.partLength)}</p>
+        <p>Projected Offall: {(.125 * parseInt(this.props.lbLength / this.props.partLength))+(this.props.lbLength % this.props.partLength).toFixed()}</p>
       </div>
     )
   }
