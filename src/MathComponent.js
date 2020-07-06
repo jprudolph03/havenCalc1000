@@ -5,10 +5,12 @@ class MathComponent extends Component{
 
     return(
       <div class="MathComponent six columns">
-        <p>PartLength:{this.props.partLength}</p>
-        <p>LongBar Length: {this.props.lbLength}</p>
-        <p>Whole Parts: {parseInt(this.props.lbLength / this.props.partLength)}</p>
-        <p>Projected Offall: {(.125 * parseInt(this.props.lbLength / this.props.partLength))+(this.props.lbLength % this.props.partLength).toFixed()}</p>
+        <p><strong>PartLength:</strong>{this.props.partLength}</p>
+        <p><strong>LongBar Length:</strong> {this.props.lbLength}</p>
+        <p><strong>Whole Parts:</strong> {parseInt(this.props.lbLength / this.props.partLength)}</p>
+        <p><strong>Lost from Cut:</strong> {(parseInt(this.props.lbLength / this.props.partLength))*.125}</p>
+        <p><strong>Min offall Length:</strong> {((parseInt(this.props.lbLength / this.props.partLength))*.125)+2.5}</p>
+        <p><strong>Math offall:</strong> {(this.props.lbLength % this.props.partLength).toFixed(3)}</p>
       </div>
     )
   }
