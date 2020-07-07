@@ -9,8 +9,9 @@ class MathComponent extends Component{
         <p><strong>LongBar Length:</strong> {this.props.lbLength}</p>
         <p><strong>Whole Parts:</strong> {parseInt(this.props.lbLength / this.props.partLength)}</p>
         <p><strong>Lost from Cut:</strong> {(parseInt(this.props.lbLength / this.props.partLength))*.125}</p>
-        <p><strong>Min offall Length:</strong> {((parseInt(this.props.lbLength / this.props.partLength))*.125)+2.5}</p>
         <p><strong>Math offall:</strong> {(this.props.lbLength % this.props.partLength).toFixed(3)}</p>
+        <p><strong>True Offall: </strong>{((this.props.lbLength % this.props.partLength)+ (parseInt(this.props.lbLength / this.props.partLength))*.125).toFixed(3)}</p>
+        <p><strong>Min offall Length (?):</strong> {((parseInt(this.props.lbLength / this.props.partLength))*.125)+2.5}</p>
       </div>
     )
   }
